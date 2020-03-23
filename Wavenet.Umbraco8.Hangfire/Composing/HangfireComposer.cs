@@ -5,7 +5,7 @@
 namespace Wavenet.Umbraco8.Hangfire.Composing
 {
     using global::Hangfire;
-
+    using global::Hangfire.Console;
     using Umbraco.Core;
     using Umbraco.Core.Composing;
 
@@ -18,7 +18,7 @@ namespace Wavenet.Umbraco8.Hangfire.Composing
         /// <inheritdoc />
         public void Compose(Composition composition)
         {
-            GlobalConfiguration.Configuration.UseSqlServerStorage(Constants.System.UmbracoConnectionName);
+            GlobalConfiguration.Configuration.UseSqlServerStorage(Constants.System.UmbracoConnectionName).UseConsole();
             composition.Register(typeof(UmbracoJobActivator));
             composition.Components().Append<HangfireComponent>();
         }

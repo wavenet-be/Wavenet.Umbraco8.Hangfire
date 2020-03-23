@@ -6,16 +6,18 @@ namespace $rootnamespace$.Components
 {
     using Hangfire;
 
+    using Umbraco.Core.Composing;
+
     using Wavenet.Umbraco8.Hangfire.Composing;
 
     /// <summary>
     /// Register jobs in Hangfire.
     /// </summary>
-    /// <seealso cref="BaseHangfireRecurringJobRegistrationComposer" />
-    public class RecurringJobRegistrationComposer : BaseHangfireRecurringJobRegistrationComposer
+    [ComposeAfter(typeof(HangfireComposer))]
+    public class RecurringJobRegistrationComposer : IUserComposer
     {
         /// <inheritdoc />
-        public override void RegisterJobs()
+        public void Compose(Composition composition)
         {
             /*
              * Adds your recurring job in Hangfire:

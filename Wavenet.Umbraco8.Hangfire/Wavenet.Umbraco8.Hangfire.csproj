@@ -7,10 +7,10 @@
     <Description>Include hangfire in your Umbraco projects.</Description>
     <Copyright>Wavenet ©</Copyright>
     <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/wavenet-be/Wavenet.Umbraco.SlotCopy</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/wavenet-be/Wavenet.Umbraco8.Hangfire</PackageProjectUrl>
     <PackageIconUrl>https://www.wavenet.be/favicon.ico</PackageIconUrl>
     <PackageIcon>wavenet.png</PackageIcon>
-    <RepositoryUrl>https://github.com/wavenet-be/Wavenet.Umbraco.SlotCopy</RepositoryUrl>
+    <RepositoryUrl>https://github.com/wavenet-be/Wavenet.Umbraco8.Hangfire</RepositoryUrl>
     <PackageTags>Umbraco8 Hangfire</PackageTags>
     <Version>1.0.0</Version>
     <DocumentationFile>Wavenet.Umbraco8.Hangfire.xml</DocumentationFile>

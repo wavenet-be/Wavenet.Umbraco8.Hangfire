@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <Company>Wavenet</Company>
+    <Authors>Olivier Bossaer</Authors>
+    <Description>Include hangfire in your Umbraco projects.</Description>
+    <Copyright>Wavenet ©</Copyright>
+    <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/wavenet-be/Wavenet.Umbraco.SlotCopy</PackageProjectUrl>
+    <PackageIconUrl>https://www.wavenet.be/favicon.ico</PackageIconUrl>
+    <PackageIcon>wavenet.png</PackageIcon>
+    <RepositoryUrl>https://github.com/wavenet-be/Wavenet.Umbraco.SlotCopy</RepositoryUrl>
+    <PackageTags>Umbraco8 Hangfire</PackageTags>
+    <Version>1.0.0</Version>
+    <DocumentationFile>Wavenet.Umbraco8.Hangfire.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Content\Wavenet.Hangfire\**\*" Pack="true" PackagePath="./content/App_plugins/Wavenet.Hangfire" />
+    <Content Include="Content\Components\**\*" Pack="true" PackagePath="./content/Components" />
+    <Content Include="Content\wavenet.png" Pack="true" PackagePath="./wavenet.png" />
+    <None Remove="Wavenet.Umbraco8.Hangfire.xml" />
+    <AdditionalFiles Include="..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.7.9" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="UmbracoCms.Web" Version="[8,9)" />
+  </ItemGroup>
+</Project>

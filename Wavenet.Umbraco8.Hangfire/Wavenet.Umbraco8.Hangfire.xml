@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wavenet.Umbraco8.Hangfire</name>
+    </assembly>
+    <members>
+        <member name="T:Wavenet.Umbraco8.Hangfire.Composing.BaseHangfireRecurringJobRegistrationComposer">
+            <summary>
+            Base class for <see cref="T:Hangfire.RecurringJob"/> registration.
+            </summary>
+            <seealso cref="T:Umbraco.Core.Composing.IUserComposer" />
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.BaseHangfireRecurringJobRegistrationComposer.Compose(Umbraco.Core.Composing.Composition)">
+            <summary>
+            Composes the specified composition.
+            </summary>
+            <param name="composition">The composition.</param>
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.BaseHangfireRecurringJobRegistrationComposer.RegisterJobs">
+            <summary>
+            Registers the jobs.
+            </summary>
+        </member>
+        <member name="T:Wavenet.Umbraco8.Hangfire.Composing.HangfireComponent">
+            <summary>
+            <see cref="T:Wavenet.Umbraco8.Hangfire.Composing.HangfireComponent"/>.
+            </summary>
+            <seealso cref="T:Umbraco.Core.Composing.IComponent" />
+        </member>
+        <member name="F:Wavenet.Umbraco8.Hangfire.Composing.HangfireComponent.umbracoJobActivator">
+            <summary>
+            The umbraco job activator.
+            </summary>
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.HangfireComponent.#ctor(Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Wavenet.Umbraco8.Hangfire.Composing.HangfireComponent" /> class.
+            </summary>
+            <param name="umbracoJobActivator">The umbraco job activator.</param>
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.HangfireComponent.Initialize">
+            <inheritdoc />
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.HangfireComponent.Terminate">
+            <inheritdoc />
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.HangfireComponent.SetupOwinMiddleware(System.Object,Umbraco.Web.OwinMiddlewareConfiguredEventArgs)">
+            <summary>
+            Setups the owin middleware.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Umbraco.Web.OwinMiddlewareConfiguredEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Wavenet.Umbraco8.Hangfire.Composing.HangfireComposer">
+            <summary>
+            <see cref="T:Wavenet.Umbraco8.Hangfire.Composing.HangfireComposer"/>.
+            </summary>
+            <seealso cref="T:Umbraco.Core.Composing.IUserComposer" />
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.HangfireComposer.Compose(Umbraco.Core.Composing.Composition)">
+            <inheritdoc />
+        </member>
+        <member name="T:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator">
+            <summary>
+            <see cref="T:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator"/>.
+            </summary>
+            <seealso cref="T:Hangfire.JobActivator" />
+        </member>
+        <member name="F:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.factory">
+            <summary>
+            The factory.
+            </summary>
+        </member>
+        <member name="F:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.umbracoContextFactory">
+            <summary>
+            The umbraco context factory.
+            </summary>
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.#ctor(Umbraco.Core.Composing.IFactory,Umbraco.Web.IUmbracoContextFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator" /> class.
+            </summary>
+            <param name="factory">The factory.</param>
+            <param name="umbracoContextFactory">The umbraco context factory.</param>
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.ActivateJob(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.BeginScope(Hangfire.Server.PerformContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.UmbracoJobActivatorScope">
+            <summary>
+            <see cref="T:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.UmbracoJobActivatorScope"/>.
+            </summary>
+            <seealso cref="T:Hangfire.JobActivatorScope" />
+        </member>
+        <member name="F:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.UmbracoJobActivatorScope.umbracoJobActivator">
+            <summary>
+            The umbraco job activator.
+            </summary>
+        </member>
+        <member name="F:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.UmbracoJobActivatorScope.umracoContextReference">
+            <summary>
+            The umraco context reference.
+            </summary>
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.UmbracoJobActivatorScope.#ctor(Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.UmbracoJobActivatorScope"/> class.
+            </summary>
+            <param name="umbracoJobActivator">The umbraco job activator.</param>
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.UmbracoJobActivatorScope.DisposeScope">
+            <inheritdoc />
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Composing.UmbracoJobActivator.UmbracoJobActivatorScope.Resolve(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="T:Wavenet.Umbraco8.Hangfire.Dashboards.HangfireDashboard">
+            <summary>
+            <see cref="T:Wavenet.Umbraco8.Hangfire.Dashboards.HangfireDashboard"/>.
+            </summary>
+            <seealso cref="T:Umbraco.Core.Dashboards.IDashboard" />
+        </member>
+        <member name="P:Wavenet.Umbraco8.Hangfire.Dashboards.HangfireDashboard.AccessRules">
+            <inheritdoc />
+        </member>
+        <member name="P:Wavenet.Umbraco8.Hangfire.Dashboards.HangfireDashboard.Alias">
+            <inheritdoc />
+        </member>
+        <member name="P:Wavenet.Umbraco8.Hangfire.Dashboards.HangfireDashboard.Sections">
+            <inheritdoc />
+        </member>
+        <member name="P:Wavenet.Umbraco8.Hangfire.Dashboards.HangfireDashboard.View">
+            <inheritdoc />
+        </member>
+        <member name="T:Wavenet.Umbraco8.Hangfire.Security.UmbracoAuthorizationFilter">
+            <summary>
+            <see cref="T:Wavenet.Umbraco8.Hangfire.Security.UmbracoAuthorizationFilter"/>.
+            </summary>
+            <seealso cref="T:Hangfire.Dashboard.IDashboardAuthorizationFilter" />
+        </member>
+        <member name="M:Wavenet.Umbraco8.Hangfire.Security.UmbracoAuthorizationFilter.Authorize(Hangfire.Dashboard.DashboardContext)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
